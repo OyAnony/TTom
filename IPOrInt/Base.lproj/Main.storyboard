@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uMT-MS-XRQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="DyQ-CZ-joW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="输入ip或者十进制数转换" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JLl-Bi-hB4">
+                                <rect key="frame" x="36" y="120" width="303" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Aul-F2-CWz"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="结果" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3f-89-hzj">
+                                <rect key="frame" x="36" y="180" width="303" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="zRT-C4-mcS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.27363502979999998" green="0.87469619509999996" blue="0.72702205180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ksF-mj-pz7">
+                                <rect key="frame" x="36" y="238" width="303" height="40"/>
+                                <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="V4N-Te-6kW"/>
+                                </constraints>
+                                <state key="normal" title="确认（请输入正确）">
+                                    <color key="titleColor" red="0.22891795640000001" green="0.74757468699999996" blue="0.62168854480000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="subitmAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EpD-34-UeF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="b3f-89-hzj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="6xC-kJ-79C"/>
+                            <constraint firstItem="ksF-mj-pz7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="Cp8-ha-Wz3"/>
+                            <constraint firstItem="JLl-Bi-hB4" firstAttribute="top" secondItem="uMT-MS-XRQ" secondAttribute="bottom" constant="100" id="O7D-UU-5wR"/>
+                            <constraint firstItem="ksF-mj-pz7" firstAttribute="top" secondItem="b3f-89-hzj" secondAttribute="bottom" constant="33" id="X5w-Cz-4Uf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="b3f-89-hzj" secondAttribute="trailing" constant="20" id="Yla-rk-HtC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JLl-Bi-hB4" secondAttribute="trailing" constant="20" id="oxJ-4t-DFr"/>
+                            <constraint firstItem="b3f-89-hzj" firstAttribute="top" secondItem="JLl-Bi-hB4" secondAttribute="bottom" constant="20" id="u7R-jB-ffH"/>
+                            <constraint firstItem="JLl-Bi-hB4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="xHG-lq-4fc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ksF-mj-pz7" secondAttribute="trailing" constant="20" id="xti-1V-kRb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="b3f-89-hzj" id="KxB-ry-hqY"/>
+                        <outlet property="textField" destination="JLl-Bi-hB4" id="15a-UT-PQM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="62.518740629685162"/>
+        </scene>
+    </scenes>
+</document>
